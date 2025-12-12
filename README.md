@@ -172,48 +172,48 @@ calendario_pagos
 Interfaces
 1. pantalla para gasto fijo
 
-GET /gastoFijo/{id}
-GET /gastoFijo?pag={pag}&pagSize={pagSize}
-POST /gastoFijo {nombre, fechaPago, monto, categoriaId, formaPagoId}
-PUT /gastoFijo/{id} {nombre, monto, categoria, formaPago}
-DELETE /gastoFijo/{id}
-POST /gastoFijo/mandarTdc/
+* GET /gastoFijo/{id}
+* GET /gastoFijo?pag={pag}&pagSize={pagSize}
+* POST /gastoFijo {nombre, fechaPago, monto, categoriaId, formaPagoId}
+* PUT /gastoFijo/{id} {nombre, monto, categoria, formaPago}
+* DELETE /gastoFijo/{id}
+* POST /gastoFijo/mandarTdc/
 
 2. pantalla de créditos
 
-GET /credito/{id}
-GET /credito?pag={pag}&pagSize={pagSize}
-POST /crédito {bancoId, descripcion, montoCapital, montoCapitalAlDia, mensualidad, fechaPago, tasaInteres}
-PUT /crédito/{id} {bancoId, descripcion, montoCapital, montoCapitalAlDia, mensualidad, fechaPago, tasaInteres}
-PUT /crédito/{id}/montoCapitalAlDia {montoCapitalAlDia}
-PUT /crédito/{id}/mensualidad {mensualidad}
+* GET /credito/{id}
+* GET /credito?pag={pag}&pagSize={pagSize}
+* POST /crédito {bancoId, descripcion, montoCapital, montoCapitalAlDia, mensualidad, fechaPago, tasaInteres}
+* PUT /crédito/{id} {bancoId, descripcion, montoCapital, montoCapitalAlDia, mensualidad, fechaPago, tasaInteres}
+* PUT /crédito/{id}/montoCapitalAlDia {montoCapitalAlDia}
+* PUT /crédito/{id}/mensualidad {mensualidad}
 
 
 3. pantalla para alta de tarjeta de crédito
 
-GET /tdc/{id}
-GET /tdc?pag={pag}&pagSize={pagSize}
-POST /tdc {bancoId, descripcion, lineaCredito, fechaCorte, diasParaPagar}
-PUT /tdc/{id}/lineaCredito {lineaCredito}
-DELETE /tdc/{id}
+* GET /tdc/{id}
+* GET /tdc?pag={pag}&pagSize={pagSize}
+* POST /tdc {bancoId, descripcion, lineaCredito, fechaCorte, diasParaPagar}
+* PUT /tdc/{id}/lineaCredito {lineaCredito}
+* DELETE /tdc/{id}
 
 
 4. pantalla para compra con tarjeta de crédito
 
-GET /compraTdc/{id}
-GET /compraTdc?pag={pag}&pagSize={pagSize}
-POST /compraTdc {tdcId, descripcion, monto, parcialidades, fechaCompra}
-PUT /compraTDC/{id}/adelantoMensualidad {monto}
-DELETE /compraTDC/{id}
+* GET /compraTdc/{id}
+* GET /compraTdc?pag={pag}&pagSize={pagSize}
+* POST /compraTdc {tdcId, descripcion, monto, parcialidades, fechaCompra}
+* PUT /compraTDC/{id}/adelantoMensualidad {monto}
+* DELETE /compraTDC/{id}
 
 5. pantalla de resumen / calendarío de pagos
-POST /calendario/calculaCalendario {mes, anio}
-GET /calendario?mes={mes}&anio={anio}
+* POST /calendario/calculaCalendario {mes, anio}
+* GET /calendario?mes={mes}&anio={anio}
 
 
 6. Pantalla para indicar que ya fue pagado por mes
-POST /pago/credito {mes, anio, monto}
-POST /pago/tdc {mes, anio monto}
+* POST /pago/credito {mes, anio, monto}
+* POST /pago/tdc {mes, anio monto}
 
 
 	
